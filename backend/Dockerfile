@@ -5,7 +5,5 @@ RUN pip install -r req.txt
 
 COPY . .
 
-
-
 WORKDIR /backend
 CMD [ "python", "-m", "src.main" ]
