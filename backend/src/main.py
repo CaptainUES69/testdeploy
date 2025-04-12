@@ -23,7 +23,11 @@ app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"]
 )
+<<<<<<< HEAD
 app.include_router(POST)
 
 if __name__ == "__main__":
     uvicorn.run(app, host="0.0.0.0", port=8000)
+=======
+app.include_router(POST)
+>>>>>>> 30662acbe249f049cecae85ceae88e27f0ed02d0
