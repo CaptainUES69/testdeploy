@@ -9,6 +9,14 @@ router = APIRouter()
 load_dotenv()
 
 
+@router.get("/test", tags = ["Сайт"], summary = "Обработка запросов", status_code = 200)
+async def anal():
+    try:
+        return "Hello"
+    except Exception as e:
+        return Response(content = "Unknown error", status_code = 500)  
+
+
 @router.get("/", tags = ["Сайт"], summary = "Обработка запросов", status_code = 200)
 async def Receive_data():
     try:
