@@ -20,7 +20,7 @@ async def anal():
 @router.get("/", tags = ["Сайт"], summary = "Обработка запросов", status_code = 200)
 async def Receive_data():
     try:
-        return FileResponse(f"{getenv("FPATH")}index.html")
+        return FileResponse(f"{getenv('FPATH')}index.html")
     except Exception as e:
         return Response(content = "Unknown error", status_code = 500)
 
@@ -28,7 +28,7 @@ async def Receive_data():
 @router.get("/css/style.css", tags = ["Сайт"], summary = "Обработка запросов", status_code = 200)
 async def Receive_data():
     try:
-        return FileResponse(f"{getenv("FPATH")}css/style.css")
+        return FileResponse(f"{getenv('FPATH')}css/style.css")
     except Exception as e:
         return Response(content = "Unknown error", status_code = 500)
 
@@ -36,7 +36,7 @@ async def Receive_data():
 @router.get("/script.js", tags = ["Сайт"], summary = "Обработка запросов", status_code = 200)
 async def Receive_data():
     try:
-        return FileResponse(f"{getenv("FPATH")}/script.js")
+        return FileResponse(f"{getenv('FPATH')}/script.js")
     except Exception as e:
         return Response(content = "Unknown error", status_code = 500)
 
@@ -44,7 +44,7 @@ async def Receive_data():
 @router.get("/imgs/close.svg", tags = ["Сайт"], summary = "Обработка запросов", status_code = 200)
 async def Receive_data():
     try:
-        return FileResponse(f"{getenv("FPATH")}imgs/close.svg")
+        return FileResponse(f"{getenv('FPATH')}imgs/close.svg")
     except Exception as e:
         return Response(content = "Unknown error", status_code = 500)
     
@@ -52,6 +52,6 @@ async def Receive_data():
 @router.get("/favicon.ico", tags = ["Сайт"], summary = "Обработка запросов", status_code = 200)
 async def Receive_data():
     try:
-        return FileResponse(f"{getenv("FPATH")}css/style.css")
+        return FileResponse(f"{getenv('FPATH')}css/style.css")
     except Exception as e:
         return Response(content = "Unknown error", status_code = 500)
