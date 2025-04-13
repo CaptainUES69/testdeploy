@@ -4,6 +4,7 @@ from contextlib import asynccontextmanager
 from dotenv import load_dotenv
 
 from .POST.router import router as POST
+from .GET.router import router as POST
 from .database.core import async_main
 
 import uvicorn
@@ -24,6 +25,7 @@ app.add_middleware(
     allow_origins=["*"]
 )
 app.include_router(POST)
+app.include_router(GET)
 
 
 if __name__ == "__main__":
