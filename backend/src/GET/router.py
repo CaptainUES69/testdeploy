@@ -49,9 +49,9 @@ async def Receive_data():
         return Response(content = "Unknown error", status_code = 500)
     
     
-@router.get("/favicon.ico", tags = ["Сайт"], summary = "Обработка запросов", status_code = 200)
-async def Receive_data():
-    try:
-        return FileResponse(f"../frontend/css/style.css")
-    except Exception as e:
-        return Response(content = "Unknown error", status_code = 500)
+# @router.get("/favicon.ico", tags = ["Сайт"], summary = "Обработка запросов", status_code = 200)
+# async def Receive_data():
+#     try:
+#         return FileResponse(f"../frontend/css/style.css")
+#     except Exception as e:
+#         return Response(content = "Unknown error", status_code = 500)
