@@ -20,7 +20,7 @@ async def anal():
 @router.get("/test", tags = ["Сайт"], summary = "Обработка запросов", status_code = 200)
 async def Receive_data():
     try:
-        return FileResponse("../frontend/index.html")
+        return FileResponse("./backend/req.txt")
     except Exception as e:
         return Response(content = "Unknown error", status_code = 500)
 
