@@ -9,7 +9,7 @@ router = APIRouter()
 load_dotenv()
 
 
-@router.get("/test", tags = ["Сайт"], summary = "Обработка запросов", status_code = 200)
+@router.get("api/test", tags = ["Сайт"], summary = "Обработка запросов", status_code = 200)
 async def anal():
     try:
         return "Hello"
