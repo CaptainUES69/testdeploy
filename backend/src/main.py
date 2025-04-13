@@ -4,7 +4,7 @@ from contextlib import asynccontextmanager
 from dotenv import load_dotenv
 
 from .POST.router import router as POST
-from .GET.router import router as POST
+from .GET.router import router as GET
 from .database.core import async_main
 
 import uvicorn
