@@ -28,7 +28,6 @@ git pull
 ```
 ### 4. Запускаем Docker контейнеры
 ```
-cp .env.example .env
-nano .env > Заполняем .env файл
 docker compose up --build
 ```
+>Если выдает ошибку при запуске вероятно отсутсвует .env в папке backend
