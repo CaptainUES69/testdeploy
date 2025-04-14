@@ -17,25 +17,18 @@ services:
   backend:
     build:
       context: ./backend
-    depends_on:
-      - env
+    volumes:
+      - ./.env:/root/deploy/backend/.env
+    environment:
+      - DBROOT=${DBROOT}
+      - HASH_KEY=${HASH_KEY}
+    env_file:
+      - .env
     networks:
       - dev
   
   frontend:
     build:
       context: ./frontend
-    depends_on:
-      - env
     networks:
       - dev
-  
-  env:
-    volumes:
-    - ./root/.env:/root/wsforum/backend/.env
-    environment:
-      - DBROOT=${DBROOT}
-      - HASH_KEY=${HASH_KEY}
-    env_file:
-      - .env
-    networks: dev
